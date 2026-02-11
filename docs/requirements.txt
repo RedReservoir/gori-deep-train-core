@@ -7,3 +7,5 @@ sphinxcontrib-jsmath
 sphinxcontrib-qthelp
 sphinxcontrib-serializinghtml
 myst-parser
+numpy
+torch
