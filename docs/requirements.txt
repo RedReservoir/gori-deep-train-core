@@ -9,4 +9,4 @@ sphinxcontrib-serializinghtml
 myst-parser
 numpy
 torch
-goti-py-utils @ git+https://github.com/RedReservoir/gori-py-utils
+gori-py-utils @ git+https://github.com/RedReservoir/gori-py-utils
