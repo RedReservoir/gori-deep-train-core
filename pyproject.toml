@@ -10,4 +10,4 @@ version = "0.0.0"
 authors = [
   { name="RedReservoir", email="gerard.ortega88@gmail.com" },
 ]
-description = "Base components for deep learning pipelines"
+description = "Base components for the gori-deep-train framework"
