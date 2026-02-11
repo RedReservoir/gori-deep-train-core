@@ -16,7 +16,7 @@ class BaseEarlyStopper:
         Updates the internal state of the early stopper with the last epoch data.
         This method is meant to be called once per epoch, after the validation loop.
         The first time this method is called (during epoch 0, where only validation is performed),
-            it must be done for initialization purposes.
+        it must be done for initialization purposes.
 
         :param loss_reg_pool: dict of str -> gorideep.utils.loss_register.LossRegister
             Loss register pool of the training pipeline.

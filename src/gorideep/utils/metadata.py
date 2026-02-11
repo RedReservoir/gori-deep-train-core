@@ -14,14 +14,14 @@ class CategoryMetadata:
 
     Metadata must consist of a list of categories in a JSON file with the following format:
 
-    ```
-    [
-        {
-            "cat_name": "<cat_name>"
-        },
-        ...
-    ]
-    ```
+    .. code-block:: text
+
+        [
+            {
+                "cat_name": "<cat_name>"
+            },
+            ...
+        ]
         
     :param cat_subset_name: str
         Name of the category subset to use.
@@ -121,16 +121,16 @@ class MultiAttributeMetadata:
 
     Metadata must consist of a list of categories in a JSON file with the following format:
 
-    ```
-    [
-        {
-            "attr_name": "<attr_name>",
-            "supattr_name": "<supattr_name>",
-        },
-        ...
-    ]
-    ```
-        
+    .. code-block:: text
+
+        [
+            {
+                "attr_name": "<attr_name>",
+                "supattr_name": "<supattr_name>",
+            },
+            ...
+        ]
+            
     :param multiattr_subset_name: str
         Name of the multiattribute subset to use.
     """

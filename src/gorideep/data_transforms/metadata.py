@@ -14,14 +14,14 @@ class CategoryToProbsWeightsDataTransform(BaseDataTransform):
 
     Metadata must consist of a list of categories in a JSON file with the following format:
 
-    ```
-    [
-        {
-            "cat_name": "<cat_name>"
-        },
-        ...
-    ]
-    ```
+    .. code-block:: text
+
+        [
+            {
+                "cat_name": "<cat_name>"
+            },
+            ...
+        ]
 
     Expects the index of the active category in the data point. If `None` is provided rather than
     the index, this means this category does not generate loss (all weights) to zero.
@@ -93,19 +93,20 @@ class MultiAttributeToProbsWeightsDataTransform(BaseDataTransform):
 
     Metadata must consist of a list of attributes in a JSON file with the following format:
 
-    ```
-    [
-        {
-            "attr_name": "<attr_name>",
-            "supattr_name": "<supattr_name>",
-        },
-        ...
-    ]
-    ```
+    .. code-block:: text
+    
+        [
+            {
+                "attr_name": "<attr_name>",
+                "supattr_name": "<supattr_name>",
+            },
+            ...
+        ]
 
     Expects two arrays (for each super-attribute):
-      - An array with the positive attribute indices.
-      - An array with the negative attribute indices.
+        - An array with the positive attribute indices.
+        - An array with the negative attribute indices.
+
     Attribute indices must be zero-indices inside of each supattribute.
     If any of these arrays is not provided, or some indices are not either positive or negative,
     no loss is generated (zero weights).

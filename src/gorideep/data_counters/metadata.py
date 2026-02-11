@@ -219,15 +219,15 @@ class MultiAttributeDataCounter(BaseDataCounter):
         Computes multi-attribute weights using the multi-attribute counts.
         The weights are returned with the following structure:
 
-        ```
-        {
-            "<super-attribute>": {
-                "positive": <positive attribute weights>,
-                "negative": <negative attribute weights>
-            },
-            ...
-        }
-        ```
+        .. code-block:: text
+
+            {
+                "<super-attribute>": {
+                    "positive": <positive attribute weights>,
+                    "negative": <negative attribute weights>
+                },
+                ...
+            }
 
         :return: dict
             A dict with the weights assigned to each super-attribute and attribute.
