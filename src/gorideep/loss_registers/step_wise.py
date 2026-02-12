@@ -46,7 +46,7 @@ class StepWiseLossRegister():
         """
 
         self._curr_epoch_step_total_loss_arr = numpy.empty(shape=(epoch_num_steps), dtype=float)
-        self._curr_epoch_step_total_items_arr = numpy.empty(shape=(epoch_num_steps), dtype=numpy.uint32)
+        self._curr_epoch_step_total_items_arr = numpy.empty(shape=(epoch_num_steps), dtype=int)
         self._curr_epoch_step_nan_flag_arr = numpy.empty(shape=(epoch_num_steps), dtype=bool)
 
         self._curr_step_total_loss = 0.0
@@ -135,7 +135,7 @@ class StepWiseLossRegister():
             torch.distributed.all_reduce(sync_curr_step_nan_flag_ten, torch.distributed.ReduceOp.MAX)
 
             self._curr_epoch_step_total_loss_arr[self._sync_step_num:self._curr_step_num] = sync_curr_step_total_loss_ten.cpu().numpy().astype(float)
-            self._curr_epoch_step_total_items_arr[self._sync_step_num:self._curr_step_num] = sync_curr_step_total_items_ten.cpu().numpy().astype(numpy.uint32)
+            self._curr_epoch_step_total_items_arr[self._sync_step_num:self._curr_step_num] = sync_curr_step_total_items_ten.cpu().numpy().astype(int)
             self._curr_epoch_step_nan_flag_arr[self._sync_step_num:self._curr_step_num] = sync_curr_step_nan_flag_ten.cpu().numpy().astype(bool)
 
         self._sync_step_num = self._curr_step_num
@@ -190,7 +190,7 @@ class StepWiseLossRegister():
         numpy.savez(
             filename,
             epoch_total_loss_arr=numpy.asarray(self._epoch_total_loss_list, dtype=float),
-            epoch_total_items_arr=numpy.asarray(self._epoch_total_items_list, dtype=numpy.uint32),
+            epoch_total_items_arr=numpy.asarray(self._epoch_total_items_list, dtype=int),
             epoch_total_nan_steps_list=numpy.asarray(self._epoch_total_nan_steps_list, dtype=bool)
         )        
 

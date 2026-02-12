@@ -36,7 +36,7 @@ class CategoryMetadata:
         
         #
 
-        metadata_dirname = os.path.join(os.environ["YADEEPSTYLE_DATA_HOME"], "metadata")
+        metadata_dirname = os.path.join(os.environ["GORIDEEPTRAIN_DATA_HOME"], "metadata")
 
         self._cat_list = goripy.file.json.load_json(
             os.path.join(metadata_dirname, "{:s}_cat_list.json".format(cat_subset_name))
@@ -144,7 +144,7 @@ class MultiAttributeMetadata:
 
         #
 
-        metadata_dirname = os.path.join(os.environ["YADEEPSTYLE_DATA_HOME"], "metadata")
+        metadata_dirname = os.path.join(os.environ["GORIDEEPTRAIN_DATA_HOME"], "metadata")
 
         self._attr_list = goripy.file.json.load_json(
             os.path.join(metadata_dirname, "{:s}_multiattr_list.json".format(multiattr_subset_name))
@@ -324,7 +324,7 @@ class CategoryToMultiAttributeMask:
         multiattr_subset_name
     ):
 
-        metadata_dirname = os.path.join(os.environ["YADEEPSTYLE_DATA_HOME"], "data", "metadata")
+        metadata_dirname = os.path.join(os.environ["GORIDEEPTRAIN_DATA_HOME"], "data", "metadata")
 
         self._cat_to_supattr_mask = numpy.load(
             os.path.join(metadata_dirname, "{:s}_cat_to_{:s}_multiattr_mask.npy".format(
