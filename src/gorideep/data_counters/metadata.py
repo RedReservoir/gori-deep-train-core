@@ -42,6 +42,7 @@ class CategoryDataCounter(BaseDataCounter):
 
     def count(
         self,
+        dataset_name,
         metadata_point
     ):
 
@@ -144,6 +145,7 @@ class MultiAttributeDataCounter(BaseDataCounter):
 
     def count(
         self,
+        dataset_name,
         metadata_point
     ):
 
