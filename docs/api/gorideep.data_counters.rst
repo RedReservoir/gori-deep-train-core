@@ -13,4 +13,5 @@ Submodules
    :maxdepth: 4
 
    gorideep.data_counters.base
+   gorideep.data_counters.dataset
    gorideep.data_counters.metadata
