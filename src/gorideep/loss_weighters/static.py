@@ -6,7 +6,7 @@ from gorideep.loss_weighters.base import BaseLossWeighter
 
 
 
-class CustomStaticLossWeighter(BaseLossWeighter):
+class StaticLossWeighter(BaseLossWeighter):
     """
     Assigns custom static weights to all losses.
     """

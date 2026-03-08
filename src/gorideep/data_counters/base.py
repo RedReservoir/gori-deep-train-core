@@ -6,11 +6,14 @@ class BaseDataCounter:
 
     def count(
         self,
+        dataset_name,
         metadata_point
     ):
         """
         Accumulates data counts from one dataset item.
 
+        :param dataset_name: str
+            Name of the dataset that the metadata point comes from.
         :param metadata_point: dict
             A dict containing metadata information of a dataset item.
         """
